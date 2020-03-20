@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 currentWeather.windSpeed = data.wind.speed
                 currentWeather.description = data.weather[0].description
                 currentWeather.iconID = data.weather[0].icon
-                let source = 'http://openweathermap.org/img/wn/' + currentWeather.iconID + '@2x.png'
+                let source = 'https://openweathermap.org/img/wn/' + currentWeather.iconID + '@2x.png'
                 current.innerHTML = currentWeather.city + ' (' + currentWeather.date + ')' + '<img src=' + source + ' width = "5%">'
                 currentTemp.textContent = currentWeather.temperature.value
                 currentHumidity.textContent = currentWeather.humidity
@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         // append weather icons
                         let p2 = document.createElement('img')
                         let iconCode = data.list[index].weather[0].icon
-                        let source = 'http://openweathermap.org/img/wn/' + iconCode + '@2x.png'
+                        let source = 'https://openweathermap.org/img/wn/' + iconCode + '@2x.png'
                         p2.setAttribute('src', source)
                         p2.style.width = "40%";
                         allDays[j].appendChild(p2)
