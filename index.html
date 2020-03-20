@@ -16,76 +16,50 @@
         <h1 class='text-center'>Weather Dashboard</h1>
     </header>
     <main id='main-body' class=' container col-12'>
-        <aside id='search-city' class='col-3 float-left pb-4'>
+        <aside id='search-city' class='col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 float-left pb-4'>
             <h5>Search for a City:</h5>
             <form>
                 <div class="form-row align-items-center">
-                  <div class="col-auto p-0">
-                    <label class="sr-only" for="inlineFormInput">Name</label>
-                    <input type="text" class="form-control mb-2" id="inlineFormInput">
-                  </div> 
-                  <div class="col-auto p-0">
-                    <button type="submit" class="btn btn-primary mb-2"><i class="fas fa-search"></i></button>
-                  </div>
+                    <div class=" col-12 col-sm-8 col-md-9 col-lg-2 col-lg-9 col-xl-9 p-0 ml-1">
+                        <label class="sr-only" for="inlineFormInput">Name</label>
+                        <input type="text" class="form-control mb-2" id="user-input" >
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 p-0">
+                        <button type="submit" id='search-Btn' class="btn btn-primary mb-2"><i class="fas fa-search"></i></button>
+                    </div>
                 </div>
-              </form>
-            <div class='col-12 p-0 ml-0 float-left'>
-                <div class='card py-1 pl-3'>Austin</div>
-                <div class='card py-1 pl-3'>Chicago</div>
-                <div class='card py-1 pl-3'>New York</div>
-                <div class='card py-1 pl-3'>Atlanta</div>
-            </div>
-
+            </form>
+            <ul class="list-group">
+                <!-- Lists of cities -->
+            </ul>
         </aside>
+
         <section class='col-9 float-right mt-3'>
             <div class='card col-12 py-3'>
-                <h4 class='mb-4'>Atlanta (8/15/2019)</h4>
-                <p>Temperature: 90.9 F</p>
-                <p> Humidity: 41%</p>
-                <p> Wind Speed: 4.7 MPH</p>
-                <p>UV Index: 9.49</p>
+                <h4 id='current' class='mb-4'>Location (Date)</h4>
+                <p>Temperature: <span id='current-temp'></span> &#8457</p>
+                <p> Humidity: <span id='current-humidity'></span> %</p>
+                <p> Wind Speed: <span id='current-wind'></span> MPH</p>
+                <p>UV Index: <a href="#" id="uv-number" class="btn btn-sm disabled" tabindex="-1" role="button" aria-disabled="true"></a></p>
+                
+                <!-- <button type="button" id="uv-number" class="btn btn-sm btn-danger" disabled>9.49</button> -->
             </div>
 
             <h4 class='mt-3'>5-Day Forecast:</h4>
             <section class='col-12'>
                 <div class='row px-0'>
-                    <div class='card col-2 days'>
-                        <p>8/16/2019</p>
-                        <p></p>
-                        <p></p>
-                        <p></p>
-                    </div>
-                    <div class='card col-2 days'>
-                        <p>8/17/2019</p>
-                        <p></p>
-                        <p></p>
-                        <p></p>
-                    </div>
-                    <div class='card col-2 days'>
-                        <p>8/18/2019</p>
-                        <p></p>
-                        <p></p>
-                        <p></p>
-                    </div>
-                    <div class='card col-2 days'>
-                        <p>8/19/2019</p>
-                        <p></p>
-                        <p></p>
-                        <p></p>
-                    </div>
-                    <div class='card col-2 days'>
-                        <p>8/20/2019</p>
-                        <p></p>
-                        <p></p>
-                        <p></p>
-                    </div>
+                    <div id='one' class='card col-8 col-sm-8 col-md-8 col-lg-2 col-xl-2 days mt-1 pt-2'></div>
+                    <div id='two' class='card col-8 col-sm-8 col-md-8 col-lg-2 col-xl-2 days mt-1 pt-2'></div>
+                    <div id='three' class='card col-8 col-sm-8 col-md-8 col-lg-2 col-xl-2 days mt-1 pt-2'></div>
+                    <div id='four' class='card col-8 col-sm-8 col-md-8 col-lg-2 col-xl-2 days mt-1 pt-2'></div>
+                    <div id='five' class='card col-8 col-sm-8 col-md-8 col-lg-2 col-xl-2 days mt-1 pt-2'></div>
                 </div>
             </section>
 
 
         </section>
     </main>
-
+<script src='weatherdash.js'></script>
 </body>
 
 </html>
