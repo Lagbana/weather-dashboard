@@ -16,7 +16,7 @@ https://lagbana.github.io/weather-dashboard/
 2. Each search item should be added to a list below the search input field
 3. When a list item is clicked, it should present the user with current and future conditions for that city
 3. Current weather will display the city name, date, a representative weather icon, temperature, humidity, wind speed, and UV index
-4. The UV index should be color coded to indicate if conditions are favorable, moderate, or severe
+4. The UV index should be color coded to indicate favorable, moderate, or severe conditions. Reference: (https://www.who.int/uv/intersunprogramme/activities/uv_index/en/index1.html)
 5. The 5-day forecast should display the date, a representative weather icon, temperature, and humidity
 6. When page is refreshed or re-opened, the weather dashboard should present the last searched city conditions
 
