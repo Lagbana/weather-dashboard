@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const searchBtn = document.querySelector('#search-Btn')
     const cityList = document.querySelector('ul')
     const current = document.querySelector('#current')
+    const currentDate = document.querySelector('#current-date')
     const currentTemp = document.querySelector('#current-temp')
     const currentHumidity = document.querySelector('#current-humidity')
     const currentWind = document.querySelector('#current-wind')
@@ -76,7 +77,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 currentWeather.description = data.weather[0].description
                 currentWeather.iconID = data.weather[0].icon
                 let source = 'https://openweathermap.org/img/wn/' + currentWeather.iconID + '@2x.png'
-                current.innerHTML = currentWeather.city + ' (' + currentWeather.date + ')' + '<img src=' + source + ' width = "5%">'
+                current.textContent = currentWeather.city 
+                currentDate.innerHTML = ' (' + currentWeather.date + ')' + '<img src=' + source + ' width = "10%">'
                 currentTemp.textContent = currentWeather.temperature.value
                 currentHumidity.textContent = currentWeather.humidity
                 currentWind.textContent = currentWeather.windSpeed
